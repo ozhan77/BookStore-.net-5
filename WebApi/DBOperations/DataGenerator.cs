@@ -17,24 +17,24 @@ namespace WebApi.DBOperations
                 }
                 context.Books.AddRange(
                     new Book{
-                Id = 1,
+                //Id = 1,
                 Title = "Kaşağı",
                 GenreId = 1,
-                PageCount ="200",
+                PageCount =200,
                 PublishDate = new DateTime(2031,01,23)
                 },
                 new Book{
-                    Id = 2,
+                    //Id = 2,
                     Title = "nasrettin hoca",
                     GenreId = 1,
-                    PageCount ="200",
+                    PageCount =200,
                     PublishDate = new DateTime(1954,04,13)
                 },
                 new Book{
-                    Id = 3,
+                    //Id = 3,
                     Title = "aşkı memnu",
                     GenreId = 2,
-                    PageCount ="200",
+                    PageCount =200,
                     PublishDate = new DateTime(1999,10,03)
                 }
                 );
