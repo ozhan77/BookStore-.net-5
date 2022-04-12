@@ -13,9 +13,11 @@ namespace WebApi.BookOperations.CreateBook
     {
         public CreateBookModel Model {get;set;}
         private readonly BookStoreDbContext _dbContext;
-        public CreateBookCommand (BookStoreDbContext dbContext)
+        private readonly IMapper _mapper;
+        public CreateBookCommand(BookStoreDbContext dbContext, IMapper mapper)
         {
-            _dbContext = dbContext; 
+            _dbContext = dbContext;
+            _mapper = mapper;
         }
 
         public void Handle()
@@ -25,11 +27,11 @@ namespace WebApi.BookOperations.CreateBook
             {
                 throw new InvalidOperationException("Kitap zaten var lan");
             }
-            book = new Book();
-            book.Title = Model.Title;
-            book.PublishDate = Model.PublisDate;
-            book.PageCount = Model.PageCount;
-            book.GenreId=Model.GenreId;
+            book = _mapper.Map<Book>(Model);//new Book();
+            // book.Title = Model.Title;
+            // book.PublishDate = Model.PublisDate;
+            // book.PageCount = Model.PageCount;
+            // book.GenreId=Model.GenreId;
 
 
             _dbContext.Books.Add(book);

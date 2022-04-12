@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Patika\\Bookstore\\WebApi\\WebApi.csproj": {}
+    "D:\\Challenge of OZ\\BookStore-.net-5\\WebApi\\WebApi.csproj": {}
   },
   "projects": {
-    "D:\\Patika\\Bookstore\\WebApi\\WebApi.csproj": {
+    "D:\\Challenge of OZ\\BookStore-.net-5\\WebApi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Patika\\Bookstore\\WebApi\\WebApi.csproj",
+        "projectUniqueName": "D:\\Challenge of OZ\\BookStore-.net-5\\WebApi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "D:\\Patika\\Bookstore\\WebApi\\WebApi.csproj",
-        "packagesPath": "C:\\Users\\OZ\\.nuget\\packages\\",
-        "outputPath": "D:\\Patika\\Bookstore\\WebApi\\obj\\",
+        "projectPath": "D:\\Challenge of OZ\\BookStore-.net-5\\WebApi\\WebApi.csproj",
+        "packagesPath": "C:\\Users\\Oğuz\\.nuget\\packages\\",
+        "outputPath": "D:\\Challenge of OZ\\BookStore-.net-5\\WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\OZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Oğuz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.6, )"
@@ -63,6 +71,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.13, 5.0.13]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -71,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
