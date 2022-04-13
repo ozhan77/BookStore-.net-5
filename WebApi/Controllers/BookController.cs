@@ -11,7 +11,6 @@ using WebApi.BookOperations.DeleteBook;
 using AutoMapper;
 using FluentValidation.Results;
 using FluentValidation;
-sing FluentValidation;
 
 namespace WebApi.AddControllers{
 
@@ -74,6 +73,8 @@ namespace WebApi.AddControllers{
             {
                 GetBookDetailQuery query = new GetBookDetailQuery(_context);
                 query.BookId = id;
+                GetBookValidator validator = new GetBookValidator();
+                validator.ValidateAndThrow(query);
                 result = query.Handle();
             }
             catch (Exception ex)
@@ -97,7 +98,7 @@ namespace WebApi.AddControllers{
                 command.Model = newBook;
                 //Validasyonun tanımlanması gereken bölüm handle dan hemen önce model oluştuğunda olması gerekiyor.
                 CreateBookCommandValidator validator = new CreateBookCommandValidator();
-                validator.ValidateAndThrow(command);
+                validator.ValidateAndThrow(command);}
             //     if(!result.IsValid)
             //     foreach (var item in result.Errors)
             //     {

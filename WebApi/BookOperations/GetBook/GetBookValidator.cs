@@ -8,11 +8,11 @@ using FluentValidation;
 
 namespace WebApi.BookOperations.GetBooks
 {
-    public class GetBookValidator : AbstractValidator<>
+    public class GetBookValidator : AbstractValidator<GetBookDetailQuery>
     {
         public GetBookValidator()
         {
-            Rulefor(command => command.BookId).
+            RuleFor(query => query.BookId).NotNull();
         }
     }
 }
