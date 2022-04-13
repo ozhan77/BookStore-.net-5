@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\BookOperations",
+    "\\BookOperations\\CreateBook",
+    "\\BookOperations\\DeleteBook",
+    "\\Common",
+    "\\Controllers"
+  ],
+  "SelectedNode": "\\BookOperations\\CreateBook\\CreateBookCommandValidator.cs",
+  "PreviewInSolutionExplorer": false
+}

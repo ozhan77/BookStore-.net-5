@@ -4,6 +4,7 @@ using System;
 using System.Linq;
 using WebApi.DBOperations;
 using WebApi.Common;
+using AutoMapper;
 
 namespace WebApi.BookOperations.CreateBook
 {

@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "qzT8c+5p+tLglhoKWsLBaLXdkI4mNs87wCLmXQIqGlUofllxJo1M5o6Qac+53APOeQhz2NSKNhgIHg9lU+YddA==",
-  "success": false,
+  "dgSpecHash": "hpeJgUMf8qlatfDp4v2YTUWbkI3YPVg0q+kNJJp21EIW5OeY9FhoMs2NOMSO7E/DjLZz3gmCQtRSxornT2YaFw==",
+  "success": true,
   "projectFilePath": "D:\\Challenge of OZ\\BookStore-.net-5\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Oğuz\\.nuget\\packages\\automapper\\10.1.0\\automapper.10.1.0.nupkg.sha512",
+    "C:\\Users\\Oğuz\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\Oğuz\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "C:\\Users\\Oğuz\\.nuget\\packages\\fluentvalidation\\10.1.0\\fluentvalidation.10.1.0.nupkg.sha512",
     "C:\\Users\\Oğuz\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Oğuz\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.6\\microsoft.entityframeworkcore.5.0.6.nupkg.sha512",
     "C:\\Users\\Oğuz\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.6\\microsoft.entityframeworkcore.abstractions.5.0.6.nupkg.sha512",
@@ -28,29 +29,8 @@
     "C:\\Users\\Oğuz\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\Oğuz\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\Oğuz\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
-    "C:\\Users\\Oğuz\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
     "C:\\Users\\Oğuz\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\Oğuz\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.13\\microsoft.netcore.app.host.win-x64.5.0.13.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "WebApi, AutoMapper (>= 10.0.1) öğesine bağımlı ancak AutoMapper 10.0.1 bulunamadı. Yaklaşık bir en iyi eşleşme olan AutoMapper 10.1.0 çözümlendi.",
-      "libraryId": "AutoMapper",
-      "targetGraphs": [
-        "net5.0"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Error",
-      "message": "AutoMapper paketi için 11.0.0 sürümünden 10.1.0 sürümüne düşürme algılandı. Farklı bir sürüm seçmek için doğrudan projeden pakete başvurun. \r\n WebApi -> AutoMapper.Extensions.Microsoft.DependencyInjection 11.0.0 -> AutoMapper (>= 11.0.0) \r\n WebApi -> AutoMapper (>= 10.0.1)",
-      "libraryId": "AutoMapper",
-      "targetGraphs": [
-        "net5.0"
-      ]
-    }
-  ]
+  "logs": []
 }

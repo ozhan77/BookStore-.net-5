@@ -8,6 +8,10 @@ using WebApi.BookOperations.CreateBook;
 using static WebApi.BookOperations.CreateBook.CreateBookCommand;
 using static WebApi.BookOperations.CreateBook.UpdateBookCommand;
 using WebApi.BookOperations.DeleteBook;
+using AutoMapper;
+using FluentValidation.Results;
+using FluentValidation;
+sing FluentValidation;
 
 namespace WebApi.AddControllers{
 
@@ -17,10 +21,10 @@ namespace WebApi.AddControllers{
     {
         private readonly BookStoreDbContext _context;
         private readonly IMapper _mapper;
-        public BookController (BookStoreDbContext context)
+        public BookController(BookStoreDbContext context, IMapper mapper)
         {
             _context = context;
-
+            _mapper = mapper;
         }
         // private static List<Book> BookList = new List<Book>()
         // {
@@ -87,12 +91,20 @@ namespace WebApi.AddControllers{
         [HttpPost]
         public IActionResult AddBook([FromBody] CreateBookModel newBook)
         {
-            CreateBookCommand command = new CreateBookCommand(_context);
+            CreateBookCommand command = new CreateBookCommand(_context,_mapper);
             try
             {
                 command.Model = newBook;
-                command.Handle();
-            }
+                //Validasyonun tanımlanması gereken bölüm handle dan hemen önce model oluştuğunda olması gerekiyor.
+                CreateBookCommandValidator validator = new CreateBookCommandValidator();
+                validator.ValidateAndThrow(command);
+            //     if(!result.IsValid)
+            //     foreach (var item in result.Errors)
+            //     {
+            //         Console.WriteLine("Özellik"+item.PropertyName+"-Error Message:"+item.ErrorMessage);
+            //     }
+            //     else command.Handle();
+            // }
             catch (Exception ex)
             {
                 
@@ -129,6 +141,8 @@ namespace WebApi.AddControllers{
             {
                 DeleteBookCommand command = new DeleteBookCommand (_context);
                 command.BookId=Id;
+                DeleteBookCommandValidator validator = new DeleteBookCommandValidator();
+                validator.ValidateAndThrow(command);
                 command.Handle();
             }
             catch (Exception ex)
