@@ -11,7 +11,7 @@ namespace WebApi.BookOperations.GetBooks
     public class GetBookValidator : AbstractValidator<GetBookDetailQuery>
     {
         public GetBookValidator()
-        {
+        {  
             RuleFor(query => query.BookId).NotNull();
         }
     }

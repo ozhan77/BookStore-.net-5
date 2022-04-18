@@ -93,12 +93,11 @@ namespace WebApi.AddControllers{
         public IActionResult AddBook([FromBody] CreateBookModel newBook)
         {
             CreateBookCommand command = new CreateBookCommand(_context,_mapper);
-            try
-            {
+            
                 command.Model = newBook;
                 //Validasyonun tanımlanması gereken bölüm handle dan hemen önce model oluştuğunda olması gerekiyor.
                 CreateBookCommandValidator validator = new CreateBookCommandValidator();
-                validator.ValidateAndThrow(command);}
+                validator.ValidateAndThrow(command);
             //     if(!result.IsValid)
             //     foreach (var item in result.Errors)
             //     {
@@ -106,13 +105,7 @@ namespace WebApi.AddControllers{
             //     }
             //     else command.Handle();
             // }
-            catch (Exception ex)
-            {
-                
-                return BadRequest(ex.Message);
-            }
-            
-            
+                  
             return Ok();
         }
 
